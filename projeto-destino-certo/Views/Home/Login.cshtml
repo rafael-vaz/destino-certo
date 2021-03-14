@@ -1,0 +1,36 @@
+@using Microsoft.AspNetCore.Http;
+@model Usuario
+@{
+    ViewData["Title"] = "Login";
+}
+
+<main class="fundo-color" style="min-height: 100vh;">
+
+    
+    <div class="login-content">  
+    <div>
+        <div class="icone-titulo"><img class="icones-content" src="~/img/icone-conta.png"><h3 class="titulos">CONTA</h3></div>
+    <form class="form-style" action="Login" method="POST">
+    <label class="label-style" asp-for="login">Login:</label>    
+    <input class="input-style" asp-for="login" name="login" placeholder="Seu login" required>
+    <label class="label-style" asp-for="senha">Senha:</label>    
+    <input class="input-style" type="password" asp-for="senha" name="senha"  placeholder="Sua senha" required>
+    <input type="submit" value="Acessar" class="input-button">
+    <p class="mensagem-style">@ViewBag.Sucesso</p>
+    </form>
+</div>
+
+    <div class="bloco-texto">
+        <h3 class="titulos">VANTAGENS DA CONTA</h3>
+        <ul>
+            <li class="label-style">Acesso aos pacotes de viagem</li>
+            <li class="label-style">Aviso sobre promoções</li>
+            <li class="label-style">Realização de compras</li>
+            <li class="label-style">Suporte e atendimento</li>
+        </ul>
+    </div>
+
+</div>
+
+
+</main>

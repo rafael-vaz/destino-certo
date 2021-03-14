@@ -1,0 +1,50 @@
+@using Microsoft.AspNetCore.Http;
+@model Pacotes
+
+@{
+    ViewData["Title"] = "Alteração de Pacote";
+}
+
+<main class="fundo-color" style="min-height: 100vh;">
+
+    
+    <div class="cadastro-content">  
+    <div>
+        <div class="icone-titulo"><img class="icones-content" src="~/img/icone-alteracaopacotes.png"><h3 class="titulos">ALTERAÇÃO DE DADOS DO PACOTE</h3></div>
+    <form class="form-style" action="Alterar_Pacote" method="POST">
+    
+    <label class="label-style" asp-for="nome">Nome:</label>    
+    <input class="input-style" asp-for="nome" name="nome" value="@Model.nome" required>
+    
+    <label class="label-style" asp-for="origem">Origem:</label>    
+    <input class="input-style" asp-for="origem" name="origem" value="@Model.origem" required>
+    
+    <label class="label-style" asp-for="destino">Destino:</label>    
+    <input class="input-style" asp-for="destino" name="destino" value="@Model.destino" required>
+    
+    <label class="label-style" asp-for="saida">Data de saída:</label> 
+    <input class="input-style" asp-for="saida" name="saida" value="@Model.saida" required>
+
+    <label class="label-style" asp-for="retorno">Data de retorno:</label> 
+    <input class="input-style" asp-for="retorno" name="retorno" value="@Model.retorno" required> 
+
+    <label class="label-style" asp-for="preco">Saída:</label> 
+    <input class="input-style" asp-for="preco" name="preco" value="@Model.preco" required>    
+    
+    <input class="input-style" asp-for="id" type="hidden" value="@Model.id" name="id" required>
+    
+    <input type="submit" value="Alterar" class="input-button">
+    </form>
+
+</div>
+
+    <div class="bloco-texto paragrafos">
+        <h3 class="titulos">DADOS DO PACOTE</h3>
+        <p>Modifique os dados do pacote ao lado apagando os antigos e inserindo os novos.</p>
+        <p>Após conferir se está tudo correto, use o botão "Alterar" para concluir a alteração.</p>
+    </div>
+
+</div>
+
+
+</main>

@@ -1,0 +1,452 @@
+/*ESTILO PADRÃO APLICADO EM TODOS OS ELEMENTOS*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*DEFINIÇÕES DE ESTILO NO CORPO DO DOCUMENTO*/
+body{
+    overflow-x: hidden;
+}
+/*ESTILOS DA BARRA DE NAVEGAÇÃO*/
+.logo{
+    width: 120px;
+    height: 35px;
+}
+
+.nav-bar{
+    background-color: #34495E;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.fundo-img{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/fundo.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    padding-right: 20px;
+    padding-left: 40px;
+}
+
+
+.icones-img{
+    width: 20px;
+    height: 20px;
+ 
+ }
+ 
+ #button-hamburger{
+     background: none;
+     border:0;
+     outline: none;
+     cursor: pointer;
+ }
+ 
+ .menu-hamburger button img{
+ transform:translateX(80px);
+ outline: none;
+ }
+ 
+ .menu-hamburger ul{
+ background:#34495E;
+ border-radius: 0px 0px 20px 20px;
+ padding: 10px 20px 10px 20px;
+ overflow-x: hidden;
+ opacity: 0;
+ transition-timing-function: ease-in;
+ transition-duration: 0.2s;
+ -webkit-box-shadow: 1px 13px 17px -12px #000000; 
+ box-shadow: 1px 13px 17px -12px #000000;
+ }
+ 
+ 
+ .menu-hamburger ul li{
+     list-style: none;
+     line-height: 40px;
+ }
+ 
+ .menu-hamburger ul li a{
+     
+     font-family: 'Amiko', sans-serif;
+     font-size:15px;
+     color: white;
+     text-decoration: none; 
+     cursor: default; 
+ }
+ 
+ .menu-hamburger ul li a:hover{
+     color:rgba(255, 255, 255, 0.671);
+ }
+ 
+ .menu-hamburger{
+     display: flex;
+     flex-direction: column;
+     z-index: 99;
+     display: block;
+     position: absolute;
+     right: 0px;
+     top: 25px;
+ }
+ 
+ .menu-hamburger button:focus + ul{
+     opacity: 1;
+ }
+ 
+ .menu-hamburger button:focus + ul li a{
+     opacity: 1;
+     cursor: pointer; 
+ }
+
+ /*ESTILO DO CONTEÚDO PRINCIPAL*/
+
+.main-content{
+    transform: translateY(220px);
+}
+
+.main-content h1{
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.main-content h3{
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    font-size: 35px;
+    color: white;
+    
+}
+
+.fundo-color{
+    background-color:#ECF0F1;
+    width: 100%;
+    height: 100vh;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top:60px;
+}
+
+.icones-content{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    
+}
+
+.pacotes-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulos{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #262626;
+    margin-bottom: 25px;
+    transform: translateY(5px);
+
+}
+
+.paragrafos{
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+    color: #262626;
+    width: 35%; 
+    line-height: 30px; 
+    margin-bottom: 30px;
+}
+
+.icone-titulo{
+    display:flex;
+}
+
+.pacotes-cards{
+    width: 100%;
+}
+
+.cards{
+    background: white;
+    height: 360px;
+    width: 230px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-box-shadow: 1px 8px 15px -7px #000000; 
+box-shadow: 1px 8px 15px -7px #000000;
+margin-bottom: 40px;
+margin-right: 20px;
+}
+
+.cards-text{
+    font-family:'Poppins', sans-serif;
+    color: black;
+    vertical-align: bottom;
+    font-size: 12px;
+    line-height: 25px;
+}
+
+#card01{
+    background-image: url("../img/card-gramado.jpg");
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+#card02{
+    background-image: url("../img/card-jp.jpg");
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;  
+}
+
+#card03{
+    background-image: url("../img/card-salvador.jpg");
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;  
+}
+
+#card04{
+    background-image: url("../img/card-natal.jpg");
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;  
+}
+
+#card05{
+    background-image: url("../img/card-rj.jpg");
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;  
+}
+
+.card-button{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-25px);
+}
+
+.button{
+    background: none;
+    border: 0;
+    outline: none;
+    cursor:pointer;
+    opacity: 0.7;
+}
+
+.button:hover{
+    opacity: 1;
+}
+
+.pacotes-cards{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 30px;
+}
+
+.atendimento-content{
+    height: 100%;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 50px;
+}
+
+.bloco-texto{
+    margin-top: 40px;
+}
+
+.cadastro-content{
+    height: 100%;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 50px;
+}
+
+.login-content{
+    height: 100%;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 200px; 
+}
+
+.login-content div ul{
+    line-height: 40px;
+    transform: translateX(10px);
+}
+
+.form-style{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-style{
+    margin-bottom: 15px;
+    outline: none;
+    width: 270px;
+    background: #D6D6D6;
+    padding: 5px 10px 5px 10px;
+    font-family:'Poppins', sans-serif;
+    font-size: 15px;
+    border: none;
+} 
+
+.label-style{
+    font-family:'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+.select-style{
+    margin-bottom: 15px;
+    outline: none;
+    width: 270px;
+    background: #D6D6D6;
+    padding: 5px 10px 5px 10px;
+    font-family:'Poppins', sans-serif;
+    font-size: 15px;
+    border: none;
+}
+
+.input-button{
+
+    font-family:'Poppins', sans-serif;
+    background: #34495E;
+    color: white;
+    font-size: 15px;
+    border:none;
+    outline: none;
+    padding: 5px 12px 5px 12px;
+}
+
+.input-button:hover{
+    background: #212e3b;;
+}
+
+.textarea-style{
+    margin-bottom: 15px;
+    resize: none;
+    outline: none;
+    width: 270px; 
+    background: #D6D6D6;
+    padding: 10px;
+    font-family:'Poppins', sans-serif;
+    border:none;
+}  
+
+
+.atendimento-content ul li{
+    width: 260px;
+    list-style: none;
+}
+
+.icone-lista{
+    margin-right: 8px;
+}
+
+@media screen and (max-width:994px){
+    .paragrafos{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:580px){
+    .paragrafos{
+        width: 70%;
+    }
+}
+
+.main-content{
+    animation-name: change-opacity;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes change-opacity{
+    from{opacity: 0;} to{opacity: 1;}
+}
+
+.table{ 
+    margin-top: 50px;
+}
+
+.usuarios-content{
+    padding-bottom: 130px;
+}
+
+/*MENSAGENS DE VIEWBAGS*/
+
+.mensagem-style{
+    font-family:'Poppins', sans-serif;
+    font-size: 15px;
+    margin-top: 15px;
+    animation-name: mensagem;
+    animation-duration: 4s;
+    animation-timing-function: ease-out;
+    opacity: 0;
+}
+
+@keyframes mensagem{
+  10%{opacity: 0.7;}
+  20%{opacity: 0.8;}
+  30%{opacity: 0.9;}
+  60%{opacity: 1;}
+  100%{opacity: 1;}
+}
+
+/*DEFINIÇÕES DE ESTILO DO RODAPÉ*/
+
+footer{
+    background-color: #34495E;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    font-family: 'Amiko', sans-serif;
+    font-size:12px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+

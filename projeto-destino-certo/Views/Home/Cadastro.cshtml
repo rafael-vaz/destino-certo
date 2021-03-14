@@ -1,0 +1,45 @@
+@using Microsoft.AspNetCore.Http;
+@model Usuario
+
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+<main class="fundo-color" style="min-height: 100vh;">
+
+    
+    <div class="cadastro-content">  
+    <div>
+        <div class="icone-titulo"><img class="icones-content" src="~/img/icone-user.png"><h3 class="titulos">CADASTRO</h3></div>
+    <form class="form-style" action="Cadastro" method="POST">
+    <label class="label-style" asp-for="nome">Nome:</label>    
+    <input class="input-style" asp-for="nome" name="nome" required placeholder="Seu nome">
+    <label class="label-style" asp-for="data_nascimento">Data de nascimento:</label>    
+    <input class="input-style" asp-for="data_nascimento" name="data_nascimento" required placeholder="dd/mm/aa" maxlength="10">
+    <label class="label-style" asp-for="login">Login:</label>    
+    <input class="input-style" asp-for="login" name="login" required placeholder="Insira um login">
+    <label class="label-style" asp-for="senha">Senha:</label>    
+    <input class="input-style" asp-for="senha" type="password" name="senha" required placeholder="Insira uma senha">
+    <label asp-for="conta" class="label-style">Tipo de conta:</label>
+    <select asp-for="conta" name="conta" class="select-style" required>
+        <option value="usuario" selected>Usuário</option>
+        <option value="colaborador">Colaborador</option>
+        <option value="administrador">Administrador</option>    
+    </select>
+
+    <input type="submit" value="Cadastrar" class="input-button">
+    </form>
+     
+     <p class="mensagem-style">@ViewBag.Cadastro</p>
+</div>
+
+    <div class="bloco-texto paragrafos">
+        <h3 class="titulos">REALIZE O SEU CADASTRO AGORA!</h3>
+        <p>Tenha acesso aos nossos diversos pacotes e promoções e realize o seu sonho de viajar pelo mundo!</p>
+        <p>Confira as melhores viajens seguindo o ponto de partida mais próximo de você.</p>
+    </div>
+
+</div>
+
+
+</main>

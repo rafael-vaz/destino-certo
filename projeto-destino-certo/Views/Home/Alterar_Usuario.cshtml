@@ -1,0 +1,39 @@
+@using Microsoft.AspNetCore.Http;
+@model Usuario
+
+@{
+    ViewData["Title"] = "Alteração de Usuário";
+}
+
+<main class="fundo-color" style="min-height: 100vh;">
+
+    
+    <div class="cadastro-content">  
+    <div>
+        <div class="icone-titulo"><img class="icones-content" src="~/img/icone-user.png"><h3 class="titulos">ALTERAÇÃO DE DADOS DO USUÁRIO</h3></div>
+    <form class="form-style" action="Alterar_Usuario" method="POST">
+    <label class="label-style" asp-for="nome">Nome:</label>    
+    <input class="input-style" asp-for="nome" name="nome" value="@Model.nome" required>
+    <label class="label-style" asp-for="data_nascimento">Data de nascimento:</label>    
+    <input class="input-style" asp-for="data_nascimento" name="data_nascimento" value="@Model.data_nascimento" required maxlength="10">
+    <label class="label-style" asp-for="login">Login:</label>    
+    <input class="input-style" asp-for="login" name="login" value="@Model.login" required>
+    <label class="label-style" asp-for="senha">Senha:</label> 
+    <input class="input-style" asp-for="senha" type="password" value="@Model.senha" name="senha" required>
+    <input class="input-style" type="hidden" asp-for="id" name="id" value="@Model.id" required>   
+    
+    <input type="submit" value="Alterar" class="input-button">
+    </form>
+
+</div>
+
+    <div class="bloco-texto paragrafos">
+        <h3 class="titulos">DADOS DO USUÁRIO</h3>
+        <p>Modifique os dados do usuário ao lado apagando os antigos e inserindo os novos.</p>
+        <p>Após conferir se está tudo correto, use o botão "Alterar" para concluir a alteração.</p>
+    </div>
+
+</div>
+
+
+</main>

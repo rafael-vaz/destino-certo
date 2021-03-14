@@ -1,0 +1,42 @@
+@using Microsoft.AspNetCore.Http;
+@model IEnumerable<Usuario>
+@{
+    ViewData["Title"] = "Listagem de Usuários";
+}
+<main class="fundo-color" style="min-height: 100vh;">
+<div class="usuarios-content">  
+<div>
+    <div class="icone-titulo"><img class="icones-content" src="~/img/icone-userlist.png"><h3 class="titulos">LISTAGEM DE USUÁRIOS</h3></div>
+<p class="paragrafos">A lista com todos os usuários cadastrados no sistema será exibida abaixo. Utilize os botões da direita para realizar a exclusão ou alteração dos usuarios</p>
+<p class="paragrafos">AVISO: Tenha cuidado ao excluir um usuário. Uma vez excluídos, os dados do registo relacionados ao usuário não poderão ser recuperados.</p>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">NOME</th>
+<!-- <th scope="col">DATA DE NASCIMENTO</th
+     <th scope="col">LOGIN</th>
+      <th scope="col">SENHA</th> 
+     <th scope="col">TIPO DE CONTA</th> -->
+      <th scope="col"></th> 
+      <th scope="col"></th>
+
+    </tr>
+  </thead>
+  <tbody>
+     @foreach(Usuario u in Model){
+    <tr>
+      <th scope="row">@u.id</th>
+      <td>@u.nome</td>
+     <!-- <td>@u.data_nascimento</td> 
+      <td>@u.login</td>
+      <td>@u.senha</td> 
+      <td>@u.conta</td> -->
+      <td><a href="/Home/Alterar_Usuario?id=@u.id"><img class="icones-content" src="~/img/icone-edit.png"></td>
+      <td><a href="/Home/Excluir_Usuario?id=@u.id"><img class="icones-content" src="~/img/icone-close2.png"></a></td>
+    </tr>} 
+  </tbody>
+</table>
+
+</div>
+</main>

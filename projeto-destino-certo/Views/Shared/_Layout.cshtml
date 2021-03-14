@@ -1,0 +1,68 @@
+﻿@using Microsoft.AspNetCore.Http;
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Site de venda de pacotes de viagens">
+    <meta name="author" content="Rafael Vaz">
+    <title>@ViewData["Title"] - Destino Certo</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/estilo.css" />
+    <link rel="icon" type="image/png" href="~/img/icone.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div>
+            <a asp-action="Index"><img src="~/img/logo-branco.png" alt="Logo" title="Destino Certo" class="logo" style="width:110px; height: 40px;"></a>
+</div>
+    <div class="right-items">
+    <div class="login-text">
+    @if(Context.Session.GetInt32("id_usuarios") != null)
+                {
+                ViewBag.Login = @Context.Session.GetString("nome");
+                
+                <a asp-action="Logout"><img class="icones-img" title="Logout" src="~/img/icone-logout.png" id="logo2" style="position:absolute; right:175px;  top: 25px;"></a>
+                <span style="font-family:'Poppins', sans-serif; color: white; position:absolute; right:120px;  top: 25px; font-size: 15px;">@ViewBag.Login</span>
+                
+                }  
+
+    </div>   
+    <div class="menu-hamburger">   
+    <button id="button-hamburger"><img alt="Menu Hamburger" title="Menu" src="~/img/icone-hamburger.png" class="icones-img"></button>
+    <ul>
+        <li><a asp-action="Index">Home</a></li>
+        <li><a asp-action="Pacotes">Pacotes</a></li>
+        <li><a asp-action="Registro_Pacotes">Registrar Pacotes</a></li>
+        <li><a asp-action="Listar_Usuarios">Lista de Usuários</a></li>
+        <li><a asp-action="Listar_Pacotes">Lista de Pacotes </a></li>
+        <li><a asp-action="Atendimento">Atendimento</a></li>
+        <li><a asp-action="Cadastro">Cadastro</a></li>
+        <li><a asp-action="Login">Login</a></li>
+    </ul>
+    </div> 
+    </div>      
+        </nav>
+    </header>
+    <div>
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <p>Destino Certo -  © Copyright 2020</p>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

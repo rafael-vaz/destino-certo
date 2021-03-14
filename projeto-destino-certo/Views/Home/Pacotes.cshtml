@@ -1,0 +1,66 @@
+﻿@using Microsoft.AspNetCore.Http;
+@model List<Pacotes>
+@{
+    ViewData["Title"] = "Pacotes";
+}
+
+<main class="fundo-color" style="min-height: 100vh;"> 
+<div class="pacotes-content">  
+<div>
+    <div class="icone-titulo"><img class="icones-content" src="~/img/icone-pacotes.png"><h3 class="titulos">PACOTES</h3></div>
+</div>
+<a href="listagem.html"><img src="~/img/icone-shopping.png" class="icones-content" id="icone-sacola"></a>
+</div>
+<p class="paragrafos">Aproveite agora os descontos exclusivos com parcelamento em até 15x sem juros! Não perca essa chance, compre e viaje quando quiser!</p>
+<div class="pacotes-cards"> 
+
+@foreach (Pacotes p in Model)
+{
+    <style>
+.card06{
+    background-image: url("../img/card-default.png");
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;  
+}
+</style>
+ <div class="cards cards-text card06"> 
+    <div class="card-button">
+   
+   @if(Context.Session.GetString("conta") == "usuario")
+                {
+
+                <style>
+                    .card-button a {
+                     display: none;
+                    }
+                </style>
+                }  
+     @if(Context.Session.GetString("conta") == "administrador")
+                {
+
+                <style>
+                    .card-button a {
+                     display: block;
+                    }
+                </style>
+                }
+     @if(Context.Session.GetString("conta") == "colaborador")
+                {
+
+                <style>
+                    .card-button a {
+                     display: block;
+                    }
+                </style>
+                }                                                                
+
+        <a class="button" asp-action="Registro_Pacotes"><img src="~/img/icone-add.png" title="Adicionar novo pacote"class="icones-content"></a>
+    <a class="button" href="/Home/Excluir_Pacotes?id=@p.id"><img src="~/img/icone-close.png" title="Remover" class="icones-content"></a>
+    </div>       
+<h6>@p.nome</h6>
+<p>Saindo de @p.origem <br>Saída: @p.saida<br>Retorno: @p.retorno<br>Preço ida e volta de: <br><b>@p.preco R$</b><br><i>Usuário: @p.usuario</i></p>
+</div>    
+}
+</div>
+</main>

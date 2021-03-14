@@ -1,0 +1,40 @@
+@using Microsoft.AspNetCore.Http;
+@model Atendimento
+@{
+    ViewData["Title"] = "Atendimento";
+}
+
+<main class="fundo-color" style="min-height: 100vh;">
+
+    
+    <div class="atendimento-content">  
+    
+    <div>
+    <div class="icone-titulo"><img class="icones-content" src="~/img/icone-atendimento.png"><h3 class="titulos">CENTRAL DE ATENDIMENTO</h3></div>
+    <form class="form-style" action="Atendimento" method="POST">
+    <label asp-for="nome">Nome:</label>    
+    <input class="input-style" asp-for="nome" name="nome" placeholder="Seu nome" required>
+    <label asp-for="email">E-mail:</label>    
+    <input class="input-style" asp-for="email" name="email" placeholder="Seu e-mail" required>
+    <label asp-for="duvida">Dúvida:</label>
+    <textarea asp-for="duvida" class="textarea-style" rows="5" cols="30" name="duvida" required placeholder="Informe qual é a sua dúvida...">
+    </textarea>
+    <input type="submit" value="Enviar" class="input-button">
+    </form>
+    <p class="mensagem-style">@ViewBag.Atendimento</p>
+</div>
+
+    <div class="bloco-texto">
+        <h3 class="titulos">CONTATO</h3>
+        <ul>
+            <li class="paragrafos"><img src="~/img/icone-endereco.png" class="icone-lista icones-img" >Recife/PE - Av. João de Barros</li>
+            <li class="paragrafos"><img src="~/img/icone-fone.png" class="icone-lista icones-img">(81) 3244.3773 / 98709.4815</li>
+            <li class="paragrafos"><img src="~/img/icone-email.png" class="icone-lista icones-img">contato@destinocerto.com.br</li>
+            <li class="paragrafos"><img src="~/img/icone-web.png" class="icone-lista icones-img">www.destinocerto.com.br</li>     
+        </ul>
+    </div>
+
+</div>
+
+
+</main>

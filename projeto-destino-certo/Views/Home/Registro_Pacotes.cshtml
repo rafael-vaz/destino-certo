@@ -1,0 +1,52 @@
+@using Microsoft.AspNetCore.Http;
+@model Pacotes
+
+@{
+    ViewData["Title"] = "Registro de Pacotes";
+}
+
+<main class="fundo-color" style="min-height: 100vh;">
+    <div class="cadastro-content">  
+    <div>
+        <div class="icone-titulo"><img class="icones-content" src="~/img/icone-suitcase.png"><h3 class="titulos">REGISTRO DE PACOTES</h3></div>
+    <form class="form-style" action="Registro_Pacotes" method="POST">
+    
+    <label class="label-style" asp-for="nome">Nome:</label>    
+    <input class="input-style" asp-for="nome" name="nome" required placeholder="Nome do pacote" maxlength="20">
+    
+    <label class="label-style" asp-for="origem">Origem:</label>    
+    <input class="input-style" asp-for="origem" name="origem" required placeholder="Local de origem">
+    
+    <label class="label-style" asp-for="destino">Destino:</label>    
+    <input class="input-style" asp-for="destino" name="destino" required placeholder="Local de destino">
+    
+    <label class="label-style" asp-for="saida">Data de saída:</label>    
+    <input class="input-style" asp-for="saida" name="saida" required placeholder="dd/mm/dd" maxlength="10">
+
+    <label class="label-style" asp-for="retorno">Data de retorno:</label>    
+    <input class="input-style" asp-for="retorno"  name="retorno" required placeholder="dd/mm/dd" maxlength="10">
+
+    <label class="label-style" asp-for="preco">Preço:</label>    
+    <input class="input-style" asp-for="preco"  name="preco" required placeholder="Preço do pacote">
+
+    @if(Context.Session.GetInt32("id_usuarios") != null)
+                {
+                ViewBag.id = @Context.Session.GetInt32("id_usuarios");
+                }  
+    <input class="input-style" type="hidden" asp-for="usuario"  name="usuario" value="@ViewBag.id" required placeholder="ID de usuário">
+    
+    <input type="submit" value="Registrar" class="input-button">
+    </form>
+     
+     <p class="mensagem-style">@ViewBag.Cadastro</p>
+</div>
+
+    <div class="bloco-texto paragrafos">
+        <h3 class="titulos">REGISTRO DE PACOTES DE VIAGEM</h3>
+        <p>Preecha os dados do pacote utilizando o formulário ao lado e use o botão "Registrar" para salva-lo no sistema.</p>
+    </div>
+
+</div>
+
+
+</main>

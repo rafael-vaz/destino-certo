@@ -1,0 +1,32 @@
+/********************************ADMINISTRADORES*******************************/
+
+Login: rafael-vaz
+
+Senha: 1701
+
+
+Login: miguel-pereira
+
+Senha: 1802
+
+/********************************COLABORADORES**********************************/
+
+Login: paulo-carvalho
+
+Senha: 1358
+
+
+Login: gustavo-ferreira
+
+Senha: 1587
+
+/********************************USUÁRIOS******************************************/
+
+Login: rodrigo-silva
+
+Senha: 3601
+
+
+Login: lucas-freitas
+
+Senha: 2201
