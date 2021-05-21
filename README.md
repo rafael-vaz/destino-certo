@@ -20,7 +20,7 @@ Sistema de venda de pacotes de viagens, criado utilizando Asp.Net Core em conjun
 
 ## Preview :camera:
 
-<img src="https://lh3.googleusercontent.com/jEuvef5z_YLyjaCHLZbYWdjGJ8npQ2R9adKB2d9vnc-9ltBv1NlBpBagtyuQKlY5RteQRTnAv7guR80w7-SVwZr1lrj6FnhHJlkhhAP88867KWQT75vRekoEYqcTtoGCJAAFv2CK_lZsnfJEALLPS6gwuVY3mY6GLBHSc31br_TQ2HX9uOkFxWWABNuxJckanwooAWBcEF4GIZeyHEQNGHooTqRxfEznb2w8nmDIYV6VKsIREYIqbWkSihFLUluxlNZn30Md30VFjJFtCtCDv_mO7LKIkholDvUS_To-cwLlgi1AbNRbkdh6JWE8EMTrnGNKJT2h5KconJNbaRKRjLa4fU1SzY0NoQ4AZfzwWmSaaIPohLRJhVBR7K57n-IA-wscZbwJfgKkSG02HnQlYLywm-qKdN-xM3f7Z-zPBKrrTYqrIaZM8r62Ihf4DhaGiKY-2wzz-vL7wxocY_YKVjiCKdDkiJvoFHHx9aeLojbXABsqzvl3-VhPMC8DdeOwqE6hm8PD7p8-L_d-Yo-U5pg-5HIflUITs6h6AkYHvQzJH_4OYGnLcBc1V6bglIy9mDrU4Mni_hIzujjCb2k4J3k_rasqqVUmgiQwN0DyUydvCnXVKd5aBUL310PeOXW5IWxvB7tmwJpSR9sVI0AEa_ujNp21rHG7BHvEH1lV0ge0wK1gwabqU0FmoVeeNz_yRtvq_JTxq2jMGiQ3isNP3Zc=w457-h210-no?authuser=0">
+<img src="https://github.com/rafael-vaz/login-session-crud-asp.net-core-mvc/blob/main/destino-certo-preview.jpg?raw=true">
 
 ## Link do website 🌎
 
