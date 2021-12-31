@@ -7,6 +7,8 @@
 /*DEFINIÇÕES DE ESTILO NO CORPO DO DOCUMENTO*/
 body{
     overflow-x: hidden;
+    height: auto;
+    width: 100%;
 }
 /*ESTILOS DA BARRA DE NAVEGAÇÃO*/
 .logo{
@@ -27,13 +29,11 @@ body{
 
 .fundo-img{
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background-image: url(../img/fundo.jpg);
     background-size: cover;
-    background-position: bottom;
+    background-position-y: 70%;
     background-repeat: no-repeat;
-    position: relative;
-    overflow: hidden;
     padding-right: 20px;
     padding-left: 40px;
 }
@@ -134,10 +134,11 @@ body{
 .fundo-color{
     background-color:#ECF0F1;
     width: 100%;
-    height: 100vh;
+    min-height: 80vh;
     padding-left: 30px;
     padding-right: 30px;
     padding-top:60px;
+    padding-bottom:50px;
 }
 
 .icones-content{
@@ -278,7 +279,7 @@ margin-right: 20px;
     flex-wrap: wrap;
     padding-right: 20px;
     padding-left: 20px;
-    padding-bottom: 50px;
+    
 }
 
 .bloco-texto{
@@ -294,11 +295,11 @@ margin-right: 20px;
     flex-wrap: wrap;
     padding-right: 20px;
     padding-left: 20px;
-    padding-bottom: 50px;
+   
 }
 
 .login-content{
-    height: 100%;
+    height: auto;
     width: 100%;
     display:flex;
     justify-content: space-between;
@@ -306,7 +307,7 @@ margin-right: 20px;
     flex-wrap: wrap;
     padding-right: 20px;
     padding-left: 20px;
-    padding-bottom: 200px; 
+    
 }
 
 .login-content div ul{
@@ -383,6 +384,14 @@ margin-right: 20px;
     margin-right: 8px;
 }
 
+.table-content{
+
+    height: auto;
+    width: 100%;
+    margin: 30px 0px;
+
+}
+
 @media screen and (max-width:994px){
     .paragrafos{
         width: 60%;
@@ -390,6 +399,14 @@ margin-right: 20px;
 }
 
 @media screen and (max-width:580px){
+    .table-content{
+       overflow-x: scroll;
+       justify-content: flex-start;
+    }
+}
+
+
+@media screen and (max-width:750px){
     .paragrafos{
         width: 70%;
     }
@@ -409,9 +426,6 @@ margin-right: 20px;
     margin-top: 50px;
 }
 
-.usuarios-content{
-    padding-bottom: 130px;
-}
 
 /*MENSAGENS DE VIEWBAGS*/
 
@@ -447,6 +461,7 @@ footer{
     text-align: center;
     width: 100%;
     position: relative;
+    bottom: 0;
 }
 
 
