@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "psuyKSOGlRgv3K6+M3TC4GSdn2Rr94AikFFa4llzUy4UlmC5tU7gBs+f64zRAWoMeWMY0pMkfVdDsshEuufJOw==",
+  "dgSpecHash": "VzvGpFzuFH5YdvjpQipeDxZkfi+C8Ckz3rT2TWxjgjzDDfDZ2NCtoTrBNSIHPYDdjY2jSieAm1PF/0IYpVdBdg==",
   "success": true,
-  "projectFilePath": "/home/rafael/Downloads/login-session-crud-asp.net-core-mvc/projeto-destino-certo/projeto-destino-certo.csproj",
+  "projectFilePath": "/home/rafael/Downloads/Meus Projetos/login-session-crud-asp.net-core-mvc/projeto-destino-certo/projeto-destino-certo.csproj",
   "expectedPackageFiles": [
     "/home/rafael/.nuget/packages/mysqlconnector/1.2.0/mysqlconnector.1.2.0.nupkg.sha512"
   ],

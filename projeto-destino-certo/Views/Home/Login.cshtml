@@ -4,8 +4,43 @@
     ViewData["Title"] = "Login";
 }
 
-<div class="fundo-color">
+<style>
+    .nav-bar,
+    footer,
+    .menu-hamburger ul {
+        background-color: #34495e !important;
+        border: none !important;
+    }
 
+    .fundo-img {
+        background-image: none !important;
+        min-height: none !important;
+        overflow-y: scroll !important;
+    }
+
+    .validation {
+        margin: 15px 0;
+        font-family: "Amiko", sans-serif;
+        color: #e12118;
+        position: absolute;
+        animation-name: change-opacity;
+        animation-duration: 3s;
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    @@keyframes change-opacity {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+</style>
+
+<div class="fundo-color">
 
     <div class="login-content">
         <div>
@@ -19,7 +54,7 @@
                 <input class="input-style" type="password" asp-for="senha" name="senha" placeholder="Sua senha"
                     required>
                 <input type="submit" value="Acessar" class="input-button">
-                <p class="mensagem-style">@ViewBag.Sucesso</p>
+                <p class="validation">@ViewBag.Validacao</p>
             </form>
         </div>
 
@@ -34,6 +69,5 @@
         </div>
 
     </div>
-
 
 </div>

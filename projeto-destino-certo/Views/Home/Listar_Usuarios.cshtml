@@ -3,7 +3,35 @@
 @{
   ViewData["Title"] = "Listagem de Usuários";
 }
-<main class="fundo-color" style="min-height: 100vh;">
+
+<style>
+  .nav-bar,
+  footer,
+  .menu-hamburger ul {
+    background-color: #34495e !important;
+    border: none !important;
+  }
+
+  .fundo-img {
+    background-image: none !important;
+    min-height: none !important;
+    overflow-y: scroll !important;
+  }
+
+  .table-content {
+    height: auto;
+    width: 100%;
+  }
+
+  @@media (max-width: 900px) {
+    .table-content {
+      overflow-x: scroll;
+      justify-content: flex-start;
+    }
+  }
+</style>
+
+<main class="fundo-color">
   <div class="usuarios-content">
     <div>
       <div class="icone-titulo"><img class="icones-content" src="~/img/icone-userlist.png">
@@ -11,7 +39,8 @@
       </div>
       <p class="paragrafos">A lista com todos os usuários cadastrados no sistema será exibida abaixo. Utilize os botões
         da direita para realizar a exclusão ou alteração dos usuarios</p>
-      <p class="paragrafos">AVISO: Tenha cuidado ao excluir um usuário. Uma vez excluídos, os dados do registo
+      <p class="paragrafos"><strong>AVISO</strong>: Tenha cuidado ao excluir um usuário. Uma vez excluídos, os dados do
+        registo
         relacionados ao usuário não poderão ser recuperados.</p>
 
 
@@ -41,8 +70,10 @@
                 <td>@u.login</td>
                 <td>@u.senha</td>
                 <td>@u.conta</td>
-                <td><a href="/Home/Alterar_Usuario?id=@u.id"><img class="icones-content" src="~/img/icone-edit.png"></td>
-                <td><a href="/Home/Excluir_Usuario?id=@u.id"><img class="icones-content" src="~/img/icone-close2.png"></a>
+                <td><a href="/Home/Alterar_Usuario?id=@u.id"><img class="icones-content" src="~/img/icone-edit.png"
+                    title="Alterar"></td>
+                <td><a href="/Home/Excluir_Usuario?id=@u.id"><img class="icones-content" src="~/img/icone-close2.png"
+                    title="Excluir"></a>
                 </td>
               </tr>
             }

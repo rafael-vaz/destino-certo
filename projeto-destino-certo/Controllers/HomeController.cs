@@ -42,8 +42,12 @@ namespace projeto_destino_certo.Controllers
          public IActionResult Cadastro(Usuario user)
         {   
             UsuarioRepository ur = new UsuarioRepository();
-            ur.Insert(user);
-            ViewBag.Cadastro = "Usuário cadastrado com sucesso!";
+            try{
+              ur.Insert(user);
+               ViewBag.Cadastro = "Usuário cadastrado com sucesso!";
+            } catch{
+               ViewBag.Cadastro = "Falha ao cadastrar usuário!";
+            }            
             return View();
         }
 
@@ -127,8 +131,14 @@ namespace projeto_destino_certo.Controllers
          public IActionResult Registro_Pacotes(Pacotes pacote)
         {   
             UsuarioRepository ur = new UsuarioRepository();
-            ur.Insert_Pacotes(pacote);
-            ViewBag.Cadastro = "Pacote registrado com sucesso!";
+
+            try{
+              ur.Insert_Pacotes(pacote);
+               ViewBag.Cadastro = "Pacote registrado com sucesso!";
+            } catch {
+              ViewBag.Cadastro = "Falha ao registrar pacote!";
+            }
+            
             return View();
         }
         
@@ -206,9 +216,13 @@ namespace projeto_destino_certo.Controllers
         public IActionResult Atendimento(Atendimento a){
             
             UsuarioRepository ur = new UsuarioRepository();
-            ur.Insert_Atendimento(a);
-            
-            ViewBag.Atendimento = "A sua dúvida foi enviada com sucesso!";
+            try{
+              ur.Insert_Atendimento(a);
+               ViewBag.Atendimento = "A sua dúvida foi enviada com sucesso!";
+            }
+             catch{
+                ViewBag.Atendimento = "Falha ao registrar dúvida!";
+             }            
             return View();
         }
 
@@ -228,15 +242,13 @@ namespace projeto_destino_certo.Controllers
             
             HttpContext.Session.SetInt32("id_usuarios", usuario.id);
             HttpContext.Session.SetString("nome", usuario.nome);
-            HttpContext.Session.SetString("conta", usuario.conta);
-
-            ViewBag.Sucesso = "Login realizado com sucesso!";
-            
+            HttpContext.Session.SetString("conta", usuario.conta); 
+            return RedirectToAction("Index"); 
+                              
             } else{
-
-                ViewBag.Sucesso = "Falha no login!";
-            }
-            return View();
+                ViewBag.Validacao = "Falha ao realizar o login!";
+                 return View();
+            }           
         }
 
         /***************************************Logout*********************************************/

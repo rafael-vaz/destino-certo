@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/rafael/Downloads/login-session-crud-asp.net-core-mvc/projeto-destino-certo/projeto-destino-certo.csproj": {}
+    "/home/rafael/Downloads/Meus Projetos/login-session-crud-asp.net-core-mvc/projeto-destino-certo/projeto-destino-certo.csproj": {}
   },
   "projects": {
-    "/home/rafael/Downloads/login-session-crud-asp.net-core-mvc/projeto-destino-certo/projeto-destino-certo.csproj": {
+    "/home/rafael/Downloads/Meus Projetos/login-session-crud-asp.net-core-mvc/projeto-destino-certo/projeto-destino-certo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/rafael/Downloads/login-session-crud-asp.net-core-mvc/projeto-destino-certo/projeto-destino-certo.csproj",
+        "projectUniqueName": "/home/rafael/Downloads/Meus Projetos/login-session-crud-asp.net-core-mvc/projeto-destino-certo/projeto-destino-certo.csproj",
         "projectName": "projeto-destino-certo",
-        "projectPath": "/home/rafael/Downloads/login-session-crud-asp.net-core-mvc/projeto-destino-certo/projeto-destino-certo.csproj",
+        "projectPath": "/home/rafael/Downloads/Meus Projetos/login-session-crud-asp.net-core-mvc/projeto-destino-certo/projeto-destino-certo.csproj",
         "packagesPath": "/home/rafael/.nuget/packages/",
-        "outputPath": "/home/rafael/Downloads/login-session-crud-asp.net-core-mvc/projeto-destino-certo/obj/",
+        "outputPath": "/home/rafael/Downloads/Meus Projetos/login-session-crud-asp.net-core-mvc/projeto-destino-certo/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/rafael/.nuget/NuGet/NuGet.Config"
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.404/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.408/RuntimeIdentifierGraph.json"
         }
       }
     }
